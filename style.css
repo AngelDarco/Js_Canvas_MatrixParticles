@@ -1,3 +1,136 @@
 *{
-    background-color: grey;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
 }
+
+.padre{
+    background: brown;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+    .header{
+        background: #000;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu{
+            background: yellow;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+
+        .menu .opcion__uno{
+            background: green;
+            flex: 1 1 auto;
+        }
+
+        .menu .opcion__dos{
+            background: green;
+            flex: 5 1 auto;
+        }
+
+        .menu .opcion__tres{
+            background: green;
+            flex: 1 1 auto;
+        }
+
+        .titulo{
+            background: lightseagreen;
+        }
+
+        .titulo h1{
+            background: pink;
+        }
+
+
+
+
+
+    .seccion__izquierda{
+        background: #000;
+        display: flex;
+               
+    }
+
+            .seccion__izquierda .contenedor__izquierda{
+                background: white;
+                flex: 2 1 auto; 
+                display: flex;
+                flex-flow: row wrap;               
+            }
+
+            .seccion__izquierda .parte{
+                background: blue;
+                flex: 1 1 40%
+                
+            }
+
+            .seccion__izquierda .parte5{
+                background-color: grey;
+                flex: 1 1 100%
+            }
+
+           
+
+
+            .seccion__izquierda .aside{
+                background: blueviolet;
+                flex: 1 1 auto;      
+                flex-flow: column wrap;
+                display: flex;
+                justify-content: center;
+               
+            }
+
+            .seccion__izquierda .aside .div__uno{
+                background: yellowgreen;
+               
+            }
+
+            .seccion__izquierda .aside .div__dos{
+                background: lightskyblue;
+               
+            }
+
+
+
+
+    .seccion__principal {
+        background:#000;
+        display: flex;
+    }
+
+            .contenedor__principal{
+                background: #fff;   
+                flex: 1 1 auto; 
+                display: flex;
+                flex-flow: row wrap;               
+                
+            }
+
+            .contenedor__principal .parte{
+                background: red;
+                flex: 1 1 40%;
+ 
+            }
+            
+            
+            
+
+    .footer{
+        background: #000;
+        display: flex;
+        justify-content: center;
+                
+    }
+
+        .footer .texto__footer{
+            background: orange;
+            width: 300px;
+        }
+
+     
