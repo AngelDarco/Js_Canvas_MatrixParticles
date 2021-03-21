@@ -6,8 +6,64 @@
 section{
     width: 100%;
     height: 100vh;
-
 }
+
+
+    /* Rotacion de la tierra alrededor del sol */
+.Rotacion{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/6.jpg);
+    background-size:cover;
+}
+
+.contenedor-rotacion{
+    position: relative;
+    top:20%;
+    left: 0;
+    width: 100%;
+    height: 400px;
+}
+    .contenedor-rotacion__sol .sol{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 25%;
+        left: 40%;
+        z-index: 10;
+        filter: drop-shadow(0 0 50px yellow);
+        animation: animacion-rotacion-sol 10s infinite linear;
+    }
+        @keyframes animacion-rotacion-sol{
+            from{transform:rotateZ(0deg)  }
+            to{transform:rotateZ(360deg)  }
+        }
+
+
+    .contenedor-rotacion__tierra .tierra{
+        width: 50px;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        border-radius: 50%;
+        animation: animacion-rotacion-tierra 20s infinite linear;
+    }
+        @keyframes animacion-rotacion-tierra{
+            from{transform:rotateZ(0deg)  }
+            to{transform:rotateZ(360deg)  }
+
+            0%{}
+            10%{box-shadow: 0 0 50px 10px yellow}
+            25%{z-index: 10; left: 40%}
+            32%{filter:contrast(20%)}
+            42%{filter: inherit}
+            50%{left: 80%}
+            75%{left:40%;filter: brightness(10%)}
+            95%{filter: inherit}
+            100%{left: 10%; }
+        }
+
+
 
 
 
