@@ -1,176 +1,53 @@
 *{
-    margin: 10px;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.padre{
-    background: brown;
-    display: flex;
-    flex-flow: column nowrap;
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Texto alrededor de una imagen */
+
+.wrap__text__around{
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: auto;
+    padding:50px;
+    background:#333;
+    border: 1px solid green
 }
 
-    .header{
-        background: #000;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-        .menu{
-            background: yellow;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-        }
-
-        .menu .opcion__uno{
-            background: green;
-            flex: 1 1 auto;
-        }
-
-        .menu .opcion__dos{
-            background: green;
-            flex: 5 1 auto;
-        }
-
-        .menu .opcion__tres{
-            background: green;
-            flex: 1 1 auto;
-        }
-
-        .titulo{
-            background: lightseagreen;
-        }
-
-        .titulo h1{
-            background: pink;
-        }
-
-
-
-
-
-    .seccion__izquierda{
-        background: #000;
-        display: flex;
-               
-    }
-
-            .seccion__izquierda .contenedor__izquierda{
-                background: white;
-                flex: 2 1 auto; 
-                display: flex;
-                flex-flow: row wrap;               
-            }
-
-            .seccion__izquierda .parte{
-                background: blue;
-                flex: 1 1 40%
-                
-            }
-
-            .seccion__izquierda .parte5{
-                background-color: grey;
-                flex: 1 1 100%
-            }
-
-           
-
-
-            .seccion__izquierda .aside{
-                background: blueviolet;
-                flex: 1 1 auto;      
-                flex-flow: column wrap;
-                display: flex;
-                justify-content: center;
-               
-            }
-
-            .seccion__izquierda .aside .div__uno{
-                background: yellowgreen;
-               
-            }
-
-            .seccion__izquierda .aside .div__dos{
-                background: lightskyblue;
-               
-            }
-
-
-
-
-    .seccion__principal {
-        background:#000;
-        display: flex;
-    }
-
-            .contenedor__principal{
-                background: #fff;   
-                flex: 1 1 auto; 
-                display: flex;
-                flex-flow: row wrap;               
-                
-            }
-
-            .contenedor__principal .parte{
-                background: red;
-                flex: 1 1 40%;
- 
-            }
-            
-            
-            
-
-    .footer{
-        background: #000;
-        display: flex;
-        justify-content: center;
-                
-    }
-
-        .footer .texto__footer{
-            background: orange;
-            width: 300px;
-        }
-
-@media all and (max-width: 800px){
-
-
-    .seccion__izquierda{
-        background-color: orangered;
-        flex-flow: column wrap;
-        
-    }
-
-    .seccion__izquierda .aside{
-        background:#fff;
-        flex-flow: row;
-    }
-
-    .seccion__izquierda .aside .div{
-        background:#000; 
-        flex: 1 1 40%;
-    }
-  }      
-
-
-  
- @media all and (max-width:600px){
-
-    .header .menu{
-        flex-flow: column wrap;
-    }
-
-    .seccion__izquierda .contenedor__izquierda{
-        flex-flow: column
-    }
-
-    .seccion__principal .contenedor__principal{
-        flex-flow: column
-    }
-
-    .seccion__izquierda .aside{
-        background:#fff;
-        flex-flow: column;
-    }
- } 
+.wrap__text__around h2{
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+}
+.wrap__text__around p{
+    color: #fff;
+    font-size: 1.2em;
+    text-align: justify;
+}
+.wrap__text__around .vegeta{
+    height: 600px;
+    float: left;
+    shape-outside: url(/img/1.png);
+    shape-margin: 10px;
+}
+.wrap__text__around .goku{
+    height: 600px;
+    float: right;
+    shape-outside: url(/img/2.png);
+    shape-margin: 10px;
+}
