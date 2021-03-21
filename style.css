@@ -3,9 +3,119 @@
     padding: 0;
     box-sizing: border-box;
 }
+section{
+    width: 100%;
+    height: 100vh;
+
+}
 
 
 
+
+/*Tarjetas Transparentes de bordes Neon*/
+
+.contenedor__tarjetas__neon{
+    margin-bottom: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:#111;
+}
+    .contenedor__tarjetas__neon .tarjetas{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+        flex-wrap: wrap;
+        position: relative;
+        width: 320px;
+        height: 400px;
+        color: white;
+        background-color: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 30px;
+        transition:0.5s;
+    }
+    .contenedor__tarjetas__neon .tarjetas:hover{
+        transform: translateY(-35px);
+    }
+    .contenedor__tarjetas__neon .tarjetas::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg,#ffbc00,#ff0058);
+    }
+    .contenedor__tarjetas__neon .tarjetas::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg,#ffbc00,#ff0058);
+        filter: blur(30px);
+    }
+            .contenedor__tarjetas__neon .tarjetas:nth-child(2)::before,
+            .contenedor__tarjetas__neon .tarjetas:nth-child(2)::after{
+                background: linear-gradient(315deg, #03a9f4,#ff0058);
+            }
+            .contenedor__tarjetas__neon .tarjetas:nth-child(3)::before,
+            .contenedor__tarjetas__neon .tarjetas:nth-child(3)::after{
+                background: linear-gradient(315deg,#4dff03,#00d0ff);
+            }
+ 
+.contenedor__tarjetas__neon .tarjetas span{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}            
+    .contenedor__tarjetas__neon .tarjetas span::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: rgba(255,255,255,0.1);
+        pointer-events: none;
+    }    
+
+.contenedor__tarjetas__neon .texto{
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+}
+    .contenedor__tarjetas__neon .texto h2{
+        font-size: 2em;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    .contenedor__tarjetas__neon .texto p{
+        font-size: 1.1em;
+        color: #fff;
+        margin-bottom: 10px;
+        line-height:1.4em
+    }       
+    .contenedor__tarjetas__neon .texto a{
+        font-size: 1.1em;
+        color: #111;
+        background: #fff;
+        padding: 10px;
+        text-decoration: none;
+        font-weight: 700;
+    }
+        
 
 
 
