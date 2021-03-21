@@ -11,9 +11,103 @@ section{
 
 
 
+/* -----Rueda de Carga Giratoria------- */
+.Loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#001d10;
+    animation: animacion-background-loading 10s linear infinite;
+}
+@keyframes animacion-background-loading{
+    0% 
+    {
+        filter:hue-rotate(0deg);
+    }
+    100% 
+    {
+        filter:hue-rotate(360deg);
+    }
+}
+
+
+.contenedor__rueda{
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.contenedor__rueda .blockes{
+    position: absolute;
+    width: 8px;
+    height: 25px;
+    background: #050c09;
+    left: 50%;
+    /*  360deg/20block =  18deg each   */
+    transform: rotate(calc(18deg *var(--i)));
+    /*  width 250px/2 = 125px  */
+    transform-origin: 0 125px;
+    animation: animacion-loading 1.9s ease-in-out infinite;
+    /*  1 / 20  = 0.05  */
+    animation-delay: calc(0.05s*var(--i));
+}
+
+@keyframes animacion-loading{
+    0%,50%
+     {
+        background: #050c09;
+        box-shadow: none;
+    }
+
+    50.1%,100% 
+    {
+        background: #0f0;
+        box-shadow: 0 0 5px #0f0,
+                    0 0 15px #0f0,
+                    0 0 30px #0f0,
+                    0 0 60px #0f0,
+                    0 0 90px #0f0,
+                    0 0 200px #0f0
+    }
+}
+
+.contenedor__rueda h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2em;
+    letter-spacing: 2px;
+    animation: animacion-texto-loading 2s ease-in-out infinite;
+    animation-delay: -1s;
+}
+
+@keyframes animacion-texto-loading {
+    0%,50%
+    {
+        color:#050c09;
+        text-shadow: none;
+    }
+    50.1%,100% 
+    {
+        color:#0f0;
+        text-shadow: 0 0 5px #0f0,
+                     0 0 10px #0f0,
+                     0 0 15px #0f0;
+    }           
+
+}
+
+
+
+
+
+
+
+
 
 /*Tarjetas Transparentes de bordes Neon*/
-
 .contenedor__tarjetas__neon{
     margin-bottom: 200px;
     display: flex;
@@ -116,18 +210,15 @@ section{
         font-weight: 700;
     }
         
-
-
-
-
-
-
-
-
+/*-----------------------------------------------*/
 
 
 
 /* Texto alrededor de una imagen */
+.Texto-Drop{
+    height: 100%;
+    background-color: #000;
+}
 
 .wrap__text__around{
     position: relative;
