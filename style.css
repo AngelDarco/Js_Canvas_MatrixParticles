@@ -9,6 +9,61 @@ section{
 }
 
 
+    /*  --------  ------------- */
+.Globos{
+    width: 100%;
+    height: 100vh;
+    background: #222;
+}
+
+.contenedor-globos-neon{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #001300;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    
+}
+
+    .globo{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: block;    
+    
+}
+    .globo::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0f0;
+        transform: scale(0.1);
+        border-radius: 50%;
+        pointer-events: none;
+        transition: 2s;
+    box-shadow: 0 0 10px #00ff0a,
+                0 0 20px #00ff0a,
+                0 0 40px #00ff0a,
+                0 0 60px #00ff0a,
+                0 0 80px #00ff0a,
+                0 0 100px #00ff0a;
+    }
+    
+    .globo:hover::before{
+        transform: scale(1);
+        transition: 0s;
+    }
+
+
+
+
+
+
     /* Rotacion de la tierra alrededor del sol */
 .Rotacion{
     width: 100%;
@@ -62,6 +117,8 @@ section{
             95%{filter: inherit}
             100%{left: 10%; }
         }
+
+
 
 
 
