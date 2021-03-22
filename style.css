@@ -9,7 +9,113 @@ section{
 }
 
 
-    /*  --------  ------------- */
+
+
+
+
+
+
+
+
+
+
+    /*     ---------   Tarjetas Transparentes    -------------- */
+
+.TarjetaT{
+    width: 100%;
+    height: 100vh;
+    background: rgba(15, 2, 29, 0.8);
+}
+
+.contenedor-tarjetas{
+    position: relative;
+    top: 10%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background: #333;
+}
+.contenedor-tarjetas .tarjetas{
+    position: relative;
+    width: 25%;
+    height: 80%;
+    padding: 40px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    border-top: 2px solid rgba(255, 255, 255, 0.432);
+    border-left: 2px solid rgba(255, 255, 255, 0.432);
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 10px -5px 30px #00ff0a;
+    backdrop-filter: blur(2px);
+    transition-delay: .2s;
+}
+
+    .contenedor-tarjetas .tarjetas__cinta{
+        position: absolute;
+        top: 45%;
+        width: 100%;
+        height: 15%;
+        z-index: 0;
+        background:rgba(14, 173, 201, 0.200)
+    }
+
+.contenedor-tarjetas .contenedor-tarjetas__botones{
+    position: absolute;
+    top:85%;
+    z-index: 0;
+      border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 30%;
+}
+.contenedor-tarjetas .contenedor-tarjetas__botones .boton{
+    width: 10%;
+    height: 35%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-shadow: 0 0 10px #f0f,
+    0 0 20px #f0f,
+    0 0 10px #f0f;
+    background: rgba(255, 3, 129, 0.055);
+    border-radius: 15px;  
+     
+}
+.contenedor-tarjetas .contenedor-tarjetas__botones .boton:hover{
+    background: rgba(255, 3, 129, 0.256);
+    z-index: 0;
+    transform:translateY(25px);
+    box-shadow: 10px 10px 10px #ff00ffb2;
+}
+
+.contenedor-tarjetas .tarjetas:hover{
+    box-shadow: 10px -5px 30px #ff5e00b2;
+    backdrop-filter: blur(10px);
+    width: 26%;
+    height: 83%;
+}
+.contenedor-tarjetas h1{
+    font-weight: bold;
+    text-shadow: 0 5px 0 #03a8f483;
+}
+
+
+
+
+
+
+
+
+
+
+
+    /*  -------- Globos Neon al paso del Cursor Hover  ------------- */
 .Globos{
     width: 100%;
     height: 100vh;
