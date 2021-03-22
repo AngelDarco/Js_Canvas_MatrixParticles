@@ -10,6 +10,84 @@ section{
 
 
 
+    /*   -----------Portada de Libro ------------   */
+
+.PortadaL{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0, .5);
+}
+
+.contenedor-portada-libro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d ;
+    perspective: 1000px;
+    min-height: 100vh;
+    border: 1px solid red;
+}
+
+.contenedor-portada-libro .libro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 383px;
+    height: 567px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, .2);
+
+    transform-style: preserve-3d;
+            transition:0.5;
+}
+
+    .contenedor-portada-libro .libro:hover{
+        transform: rotateY(35deg);
+        box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
+    }
+    .contenedor-portada-libro .libro:active{
+        transform: rotateY(180deg)
+    }
+        
+    .contenedor-portada-libro .libro::before{
+            content: "";
+            width: 60px;
+            height: 100%;
+            position: absolute;
+            transform-origin: left;
+            top: 0;
+            left: 0;
+            background: url(/img/side.jpg);
+            background-position: center;
+            transform: rotateY(90deg);
+        }
+
+        .contenedor-portada-libro .libro::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-origin: center;
+            top: 0;
+            left: 0;
+            background: url(/img/back.jpg);
+            background-position: center;
+            transform: rotateY(180deg) translateZ(60px);
+        }
+
+
+.contenedor-portada-libro .libro img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;        
+    }
+
+
+
+
 
 
 
