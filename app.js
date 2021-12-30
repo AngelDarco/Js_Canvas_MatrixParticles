@@ -1,15 +1,19 @@
 import {myImage} from './img.js';
 
 myImage.addEventListener('load', function(){
-
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 canvas.width = 528;
 canvas.height = 528;
 
-/* ctx.drawImage(myImage, 0, 0, canvas.width, canvas.height);
- */
+console.log(myImage)
+
+var pixels = {}
+    pixels.data = myImage.src;
+    pixels.width = myImage.width;
+
+ctx.drawImage(myImage, 0, 0, canvas.width, canvas.height); 
 
 let particlesArray = [];
 const numberOfParticles = 5000;
@@ -22,20 +26,12 @@ for (let x = 0; x < canvas.width; x++) {
     const red = pixels.data[(y*4*pixels.width)+(x*4)];
     const green = pixels.data[(y*4*pixels.width)+(x*4+1)];
     const blue = pixels.data[(y*4*pixels.width)+(x*4+2)];
-    const brightness = calculateRelativeBrightness(red, green, blue);
-    const cell = [ cellBrightness = brightness];
-    row.push( cell);
+    //const brightness = calculateRelativeBrightness(red, green, blue);
+   // const cell = [ cellBrightness = brightness];
+   // row.push( cell);
     
     }
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -66,18 +62,15 @@ class Particles{
 }
 
 
-function init(){
+(function init(){
     for(let i = 0; i < numberOfParticles; i++){
         particlesArray.push(new Particles);
     }
-}
-
-init();
+})();
 
 
-function animate(){
+(function animate(){
     ctx.drawImage(myImage, 0, 0, canvas.width, canvas.height);
-    
     ctx.globalAlpha = 0.05;
     ctx.fillStyle = 'rgb(0, 0, 0)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -86,8 +79,5 @@ function animate(){
         particlesArray[i].draw();
     }
     requestAnimationFrame(animate);
-}
-
-
-animate();
+    })()
 });
